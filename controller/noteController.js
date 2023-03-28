@@ -4,13 +4,7 @@ const memStorage =require('../util/memory.storage')
 const model = require('../model/note.model')
 
 exports.getallnotes = (req,res)=>{
-    // const sqlId =generator.generate();
-    // memstorage.store.setItem(sqlId,"1st key")
-
-    // const sqlId_2 =generator.generate();
-    // memstorage.store.setItem(sqlId_2,"2nd key")
     
-    // var keys= memstorage.getkey(memstorage.store)
     var values = memStorage.getvalues(memStorage.store);
     console.log("Values ....... " + JSON.stringify(values));
     return res.status(200).send(JSON.stringify(values));
